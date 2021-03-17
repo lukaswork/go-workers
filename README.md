@@ -1,8 +1,9 @@
-[![Build Status](https://travis-ci.org/jrallison/go-workers.png)](https://travis-ci.org/jrallison/go-workers)
-[![GoDoc](https://godoc.org/github.com/jrallison/go-workers?status.png)](https://godoc.org/github.com/jrallison/go-workers)
+[![Build Status](https://travis-ci.org/jrallison/go-workers.png)](https://travis-ci.org/lukaswork/go-workers)
+[![GoDoc](https://godoc.org/github.com/jrallison/go-workers?status.png)](https://godoc.org/github.com/lukaswork/go-workers)
 
 [Sidekiq](http://sidekiq.org/) compatible
 background workers in [golang](http://golang.org/).
+
 
 * reliable queueing for all queues using [brpoplpush](http://redis.io/commands/brpoplpush)
 * handles retries
@@ -18,7 +19,7 @@ Example usage:
 package main
 
 import (
-	"github.com/jrallison/go-workers"
+	"github.com/lukaswork/go-workers"
 )
 
 func myJob(message *workers.Msg) {
@@ -68,6 +69,3 @@ func main() {
   // Blocks until process is told to exit via unix signal
   workers.Run()
 }
-```
-
-Initial development sponsored by [Customer.io](http://customer.io)
